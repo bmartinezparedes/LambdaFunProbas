@@ -55,12 +55,12 @@ fun main(args: Array<String>) {
     // Ejemplo de tipo lambda
     // La variable es de tipo funcion
     // una funcion que recibe dos String y devuelve una
-    /* var nombreCompleto: (String, String) -> String = { nombre: String, apellido: String -> "$nombre $apellido"}
+    var nombreCompleto: (String, String) -> String = { nombre: String, apellido: String -> "$nombre $apellido"}
     println(nombreCompleto("d","n"))
     // utilizando 'invoke'
     nombreCompleto = { nombre: String, apellido: String -> "$nombre + $apellido"}
     println(nombreCompleto.invoke("d","n"))
-    */
+
 }
 
 /**
