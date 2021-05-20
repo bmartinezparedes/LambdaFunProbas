@@ -1,3 +1,5 @@
+import java.lang.NumberFormatException
+
 fun main(args: Array<String>) {
 
     // Ejemplo pasar funcion por parámetro a otra función
@@ -52,7 +54,11 @@ fun main(args: Array<String>) {
     val miLambdaExtensa: (Int, String) -> String =
         {i: Int, c: String ->
             print("1->Capitaliza 2->Todo a mayúscula: ")
-            val peticion = readLine()?.toInt()
+            val peticion = try {
+                readLine()?.toInt()
+            } catch (_: NumberFormatException) {
+                1
+            }
             if (peticion == 1) {
                 c.capitalize()
             }
