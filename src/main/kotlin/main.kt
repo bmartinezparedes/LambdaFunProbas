@@ -46,4 +46,20 @@ fun main(args: Array<String>) {
     // Utilizamos esta nueva función pasándole 'otra' lambda diferente
     println(utilizoEnteroSobreStringFlexible(5, "machupichu", {i: Int, c: String -> c.replace(c[i].toString(),"")}))
     // salida: machuichu
+
+    // También podemos definir una función más extensa y pasársela
+    // respetando los param y el return
+    val miLambdaExtensa: (Int, String) -> String =
+        {i: Int, c: String ->
+            print("1->Capitaliza 2->Todo a mayúscula: ")
+            val peticion = readLine()?.toInt()
+            if (peticion == 1) {
+                c.capitalize()
+            }
+            else {
+                c.toUpperCase()
+            }
+        }
+    // le pasamos la funcion miLambdaExtensa
+    println(utilizoEnteroSobreStringFlexible(1, "extensión", miLambdaExtensa))
 }
