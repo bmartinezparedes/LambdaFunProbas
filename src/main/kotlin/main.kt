@@ -38,4 +38,8 @@ fun main(args: Array<String>) {
         return nuevaCadena
     }
 
+    // Utilizamos esta nueva función pasándole una lambda que extraiga una substring
+
+    println(utilizoEnteroSobreStringFlexible (2, "adios", {i: Int, c: String -> c.substring(i)}))
+    // salida: ios
 }
