@@ -24,4 +24,18 @@ fun main(args: Array<String>) {
     println(utilizoEnteroSobreString(5, "murcielago"))
     // salida: murcilago
 
+    // Definimos una función que además de recibir un entero y una cadena
+    // recibe la función que utilizará
+
+    /**
+     * Realiza 'algo' con un entero y una cadena
+     * @param indice entero que utilizaré en la función
+     * @param cadena que utilizaré en la función
+     * @param paramFuncion función que hará algo con un entero y una cadena y devolverá una cadena
+     */
+    fun utilizoEnteroSobreStringFlexible( indice: Int, cadena: String, paramFuncion: (Int, String) -> String): String {
+        var nuevaCadena = paramFuncion(indice, cadena)
+        return nuevaCadena
+    }
+
 }
