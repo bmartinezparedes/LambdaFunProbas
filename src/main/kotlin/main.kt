@@ -42,4 +42,8 @@ fun main(args: Array<String>) {
 
     println(utilizoEnteroSobreStringFlexible (2, "adios", {i: Int, c: String -> c.substring(i)}))
     // salida: ios
+
+    // Utilizamos esta nueva función pasándole 'otra' lambda diferente
+    println(utilizoEnteroSobreStringFlexible(5, "machupichu", {i: Int, c: String -> c.replace(c[i].toString(),"")}))
+    // salida: machuichu
 }
