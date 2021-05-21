@@ -68,4 +68,8 @@ fun main(args: Array<String>) {
         }
     // le pasamos la funcion miLambdaExtensa
     println(utilizoEnteroSobreStringFlexible(1, "extensión", miLambdaExtensa))
+
+    val miArray= miArray(10){it*6}
+
+
 }
